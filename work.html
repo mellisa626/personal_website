@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>Part-Time Work</title>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.back-btn-container {
+		text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+	}
+	.back-btn {
+		text-decoration: none;
+		color: white;
+		background-color: #6c757d;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+	.back-btn:hover {
+		background-color: #555;
+	}
+	.container {
+		display: flex; 
+		justify-content: space-between; 
+		align-items: center;
+		width: 80%; 
+		margin: 70px auto;
+		gap: 50px; 
+	}
+	.content-box {
+		background-color: rgba(13, 27, 42, 0.7);
+		border-radius: 15px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		padding: 20px;
+		margin: 10px;
+	}
+	.gallery {
+		text-align: center;
+	}
+	.gallery img {
+		width: 100%;
+		max-width: 800px;
+		height: auto;
+		border-radius: 20px;
+	}
+	.biodata {
+		color: #e7e6e1;
+		line-height: 1.8;
+	}
+	.biodata h3 {
+		text-align: center;
+		color: #e7e6e1;
+		}
+	.biodata ul {
+		list-style-type: square;
+		padding-left: 20px;
+	}
+	/* Adjust box sizes */
+	.gallery-box {
+		flex: 1;
+		max-width: 50%; 
+	}
+	.biodata-box {
+		flex: 2;
+		max-width: 50%;
+	}
+	}/* Media Query for Small Screens */
+	@media all and (max-width: 768px) {
+		.container {
+			flex-direction: column;
+			gap: 20px;
+			width: 90%;
+		}
+		.gallery-box, .biodata-box {
+			max-width: 100%;
+		}
+		.back-btn {
+			font-size: 14px;
+			padding: 8px 15px;
+		}
+		.content-box {
+			padding: 15px;
+		}
+		.gallery img {
+			max-width: 100%;
+		}
+		.biodata h3 {
+			font-size: 1.3em;
+		}
+		.biodata ul {
+			font-size: 0.9em;
+		}
+	/* Media Query for Extra Small Screens (Mobile Phones) */
+	@media all and (max-width: 480px) {
+		.back-btn {
+			font-size: 12px;
+			padding: 6px 12px;
+		}
+		.container {
+			width: 100%;
+			padding: 0 10px;
+		}
+		.gallery img {
+			max-width: 100%;
+		}
+		.biodata h3 {
+			font-size: 1.1em;
+		}
+		.biodata ul {
+			font-size: 0.85em;
+		}
+	}
+	</style>
+    <body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+		<body>
+			<!-- Back button -->
+			<div class="back-btn-container">
+				<a href="javascript:history.back()" class="back-btn">Back</a>
+			</div>
+			<div class="container">
+				<!-- Image Box -->
+				<div class="content-box gallery-box">
+					<div class="gallery">
+						<img src="images/work.jpeg" alt="me">
+					</div>
+				</div>
+				<!-- Biodata Box -->
+				<div class="content-box biodata-box">
+					<div class="biodata">
+						<h3>My Part-Time Work</h3>
+						<br><hr color="#0d1b2a"><br>
+						<ul>
+							<li><b>Company:</b> MATRIX FLAVOUR SDN BHD</li>
+							<li><b>Lenght of Work:</b> 2023 & 2024</li>
+							<li><b>Position:</b> Data Entry Clerk</li>
+							<li><b>Department:</b> Research & Development</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</body>	
+		
+	<!--footer-->
+	<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+	
+	<script>
+        $('.icon').click(function(){
+            $('span').toggleClass("cancel");
+        });
+    </script>
+	
+	</body>
+</html>

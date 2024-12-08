@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>Contacts</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	    <link rel="stylesheet" href="style.css">
+    </head>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.back-btn-container {
+		text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+	}
+	.back-btn {
+		text-decoration: none;
+		color: white;
+		background-color: #6c757d;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+	.back-btn:hover {
+		background-color: #555;
+	}	
+	.wrapper .center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);  
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.welcome-text {
+		position: absolute;
+		width: 600px;
+		height: 300px;
+		margin: 10% 44%;
+		text_align: center;
+	} 
+	.wrapper .button {
+		justify-content: center;
+		align-items: center;
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		float: left;
+		text-decoration: none;
+		margin: 0 5px;
+		overflow: hidden;
+		background: #fff;
+		border-radius: 50px;
+		cursor: pointer;
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease-out;
+	}
+	.wrapper .button:hover {
+		width: 200px;
+	}
+	.wrapper .button .icon {
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		color: #000;
+		text-align: center;
+		border-radius: 50px;
+		box-sizing: border-box;
+		line-height: 60px;
+		transition: all 0.3s ease-out;
+	}
+	.wrapper .button:nth-child(1):hover .icon {
+		background: #C71585;
+	}
+	.wrapper .button:nth-child(2):hover .icon {
+		background: #000000;
+	}
+	.wrapper .button:nth-child(3):hover .icon {
+		background: #32CD32;
+	}
+	.wrapper .button:nth-child(4):hover .icon {
+		background: #8B0000;
+	}
+	.wrapper .button .icon i {
+		font-size: 25px;
+		line-height: 60px;
+		transition: all 0.3s ease-out;
+	}
+	.wrapper .button:hover .icon i {
+		color: #fff;
+	}
+	.wrapper .button span {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 60px;
+		margin-left: 10px;
+		transition: all 0.3s ease-out;
+	}
+	.wrapper .button:nth-child(1) span {
+		color: #C71585;
+	}
+	.wrapper .button:nth-child(2) span {
+		color: #000000;
+	}
+	.wrapper .button:nth-child(3) span {
+		color: #32CD32;
+	}
+	.wrapper .button:nth-child(4) span {
+		color: #8B0000;
+	}
+	/* Mobile Responsiveness */
+	@media (max-width: 768px) {
+		.welcome-text {
+			width: 100%;
+			margin: 10% 10%;
+		}
+		.wrapper .center {
+			position: relative;
+			display: block;
+			top: 0;
+			left: 0;
+			transform: none;
+		}
+		.wrapper .button {
+			width: 80px;
+			height: 80px;
+			margin: 10px 0;
+		}
+		.wrapper .button:hover {
+			width: 100%; /* On hover, the button will expand to full width */
+		}
+		.wrapper .button .icon {
+			font-size: 20px;
+		}
+		.wrapper .button span {
+			font-size: 16px;
+			margin-left: 15px;
+		}
+		/* Stack buttons vertically for smaller screens */
+		.wrapper .button {
+			width: 100%; /* Buttons will take full width */
+			margin-bottom: 15px; /* Add space between buttons */
+		}
+		.wrapper .button span {
+			display: block; /* Move the text below the icon */
+			margin-left: 0;
+			padding: 5px 0;
+			text-align: center;
+		}
+	}
+	</style>
+	<body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+		<!-- Back button -->
+		<div class="back-btn-container">
+			<a href="javascript:history.back()" class="back-btn">Back</a>
+		</div>
+		<div class="welcome-text">
+			<h1 style="color:#D3D3D3;">Contact Me!</h1>
+		</div>
+		<div class="wrapper">
+			<div class="center">		
+				<a href="https://www.instagram.com/melyamaisarah_/profilecard/?igsh=MWN4OWJiM3YyNWd1cw==" class="button">
+					<div class="icon">
+						<i class="fab fa-instagram"></i>
+					</div>
+					<span>Instagram</span>
+				</a>
+				<a href="https://www.tiktok.com/@mellisa_04?_t=8r6V9C73dWK&_r=1" class="button">
+					<div class="icon">
+						<i class="fab fa-tiktok"></i>
+					</div>
+					<span>Tiktok</span>
+				</a>
+				<a href="https://wa.link/40p16u" class="button">
+					<div class="icon">
+						<i class="fas fa-phone"></i>
+					</div>
+					<span>Whatsapp</span>
+				</a>
+				<a href="mailto:melyamaisarah@gmail.com" class="button">
+					<div class="icon">
+						<i class="fas fa-envelope"></i>
+					</div>
+					<span>Email</span>
+				</a>	
+			</div>
+		</div>
+	
+		<!--footer-->
+		<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+	
+	</body>
+</html>

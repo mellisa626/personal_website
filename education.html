@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>Education</title>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.back-btn-container {
+		text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+	}
+	.back-btn {
+		text-decoration: none;
+		color: white;
+		background-color: #6c757d;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+	.back-btn:hover {
+		background-color: #555;
+	}
+	.card-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 50px;
+	}
+	.card {
+		width: 300px;
+		background-color: #B0C4DE;
+		border-radius: 8px;
+		overflow: hidden;
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+		margin: 20px;
+	}
+	.card img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		display: block;
+	}
+	.card-content {
+		padding: 20px;
+	}
+	.card-content h3 {
+		margin-bottom: 10px;
+		font-size: 1.5em;
+		color: #333;
+	}
+	.card-content p {
+		margin-bottom: 20px;
+		font-family: 'Georgia', serif;
+		font-size: 1em;
+		color: #555;
+	}
+	.btn {
+		text-decoration: none;
+		color: white;
+		background-color: #333;
+		padding: 10px 20px;
+		border-radius: 4px;
+		display: inline-block;
+	}
+	/* Media Query for Small Screens (Tablets and Mobile Devices) */
+	@media all and (max-width: 768px) {
+		.card-container {
+			justify-content: flex-start;
+			gap: 20px;
+			margin-top: 20px;
+		}
+		.card {
+			width: 250px;
+			margin: 10px;
+		}
+		.card-content h3 {
+			font-size: 1.3em;
+		}
+		.card-content p {
+			font-size: 0.9em;
+		}
+		.btn {
+			font-size: 14px;
+			padding: 8px 16px;
+		}
+	}
+	/* Media Query for Extra Small Screens (Mobile Phones) */
+	@media all and (max-width: 480px) {
+		.card-container {
+			justify-content: center;
+			padding: 0 10px;
+		}
+		.card {
+			width: 100%;
+			margin: 10px 0;
+		}
+		.card-content h3 {
+			font-size: 1.2em;
+		}
+		.card-content p {
+			font-size: 0.85em;
+		}
+		.btn {
+			font-size: 12px;
+			padding: 6px 12px;
+		}
+	}
+	</style>
+    <body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+        <body>
+			<!-- Back button -->
+			<div class="back-btn-container">
+				<a href="javascript:history.back()" class="back-btn">Back</a>
+			</div>
+			<div class="card-container">
+                <div class="card">
+            		<img src="images/sk.png">
+					<div class="card-content">
+					    <h3>SK TPG</h3>
+						<p>Want to know more about my primary school, click the button bellow</p>
+						<a href="primary.html" class="btn">Read More</a>
+					</div>
+				</div>
+				<div class="card">
+            		<img src="images/smk.png">
+					<div class="card-content">
+					    <h3>SMK TPG</h3>
+						<p>Want to know more about my high school, click the button bellow</p><br>
+						<a href="high.html" class="btn">Read More</a>
+					</div>
+				</div>
+				<div class="card">
+            		<img src="images/uitm.png">
+					<div class="card-content">
+					    <h3>DIPLOMA</h3>
+						<p>Want to know more about my diploma, click the button bellow</p><br>
+						<a href="dip.html" class="btn">Read More</a>
+					</div>
+				</div>
+            </div>
+		</body>	
+		
+	<!--footer-->
+	<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+	
+	<script>
+        $('.icon').click(function(){
+            $('span').toggleClass("cancel");
+        });
+    </script>
+	
+    </body>
+</html>

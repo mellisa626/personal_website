@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>MelyaLifeStory</title>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+	    <section class="home">
+		    <div class="home-img">
+			    <img src="images/me.jpeg" alt="">
+			</div>
+			<div class="home-content">
+			    <h1 style="color:#FAFAD2;">Hi, It's <span>Melya</span></h1>
+				<h3 style="color:#D3D3D3;">I'm a diploma student<span></span></h3>
+				<p style="color:#FAF0E6;">Welcome to my personal website! This is where I share my journey, passions, and moments<span></span></p>
+				<p style="color:#FAF0E6;">that matter most to me. Explore my world and stay connected as I share stories, insights,<span></span></p>
+				<p style="color:#FAF0E6;">and everything that inspires me.</p>
+				<div class="clock-box">
+					<p id="clock">Current Time: --:--:--</p>
+				</div>
+			</div>
+		</section>
+		
+    <!--footer-->
+	<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+	
+	<script>
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').innerText = `Current Time: ${timeString}`;
+    }
+
+		// Call updateClock every second
+		setInterval(updateClock, 1000);
+		// Initialize clock immediately
+		updateClock();
+	
+    $('.icon').click(function(){
+    $('span').toggleClass("cancel");
+    });
+    </script>
+	
+    </body>
+</html>

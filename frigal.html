@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>Friends Gallery</title>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.back-btn-container {
+		text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+	}
+	.back-btn {
+		text-decoration: none;
+		color: white;
+		background-color: #6c757d;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+	.back-btn:hover {
+		background-color: #555;
+	}
+	.gallery-container {
+		width: 100%;
+		max-width: 1400px; 
+		margin: 0 auto;
+		padding: 20px;
+		text-align: center; 
+		overflow: hidden;
+	}
+	.gallery-grid {
+		margin-top: 60px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 8px;
+		justify-content: center; 
+		justify-items: center; 
+		align-items: center;
+	}
+	.gallery-item img {
+		width: 100%;
+		max-width: 250px; 
+		height: auto;
+		margin: 0 auto; 
+		border-radius: 8px;
+		transition: transform 0.3s ease;
+	}
+	.gallery-item img:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+	/* Mobile Responsiveness */
+	@media (max-width: 1024px) {
+		.gallery-grid {
+			grid-template-columns: repeat(3, 1fr); /* 3 items in a row for tablets */
+		}
+	}
+	@media (max-width: 768px) {
+		.gallery-grid {
+			grid-template-columns: repeat(2, 1fr); /* 2 items in a row for larger phones */
+		}
+	}
+	@media (max-width: 600px) {
+		.gallery-grid {
+			grid-template-columns: repeat(1, 1fr); /* 1 item in a row for small phones */
+		}
+	}
+	</style>
+    <body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+        <body>
+			<!-- Back button -->
+			<div class="back-btn-container">
+				<a href="javascript:history.back()" class="back-btn">Back</a>
+			</div>
+			<div class="gallery-grid">
+				<div class="gallery-item">
+					<img src="images/fri1.jpeg" alt="Image 1">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri2.jpeg" alt="Image 2">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri3.jpeg" alt="Image 3">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri4.jpeg" alt="Image 4">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri5.jpeg" alt="Image 5">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri6.jpeg" alt="Image 6">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri7.jpeg" alt="Image 7">
+				</div>
+				<div class="gallery-item">
+					<img src="images/fri8.jpeg" alt="Image 8">
+				</div>
+				<!-- Add more images as needed -->
+			</div>
+		</body>	
+		
+	<!--footer-->
+	<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+	
+	<script>
+        $('.icon').click(function(){
+            $('span').toggleClass("cancel");
+        });
+    </script>
+	
+    </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>Gallery</title>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.back-btn-container {
+		text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+	}
+	.back-btn {
+		text-decoration: none;
+		color: white;
+		background-color: #6c757d;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+	.back-btn:hover {
+		background-color: #555;
+	}
+	.gallery-container {
+		width: 100%;
+		max-width: 1400px; 
+		margin: 0 auto;
+		padding: 20px;
+		text-align: center; 
+	}
+	.gallery-heading {
+		margin-top: 50px;
+		text-align: center;
+		margin-bottom: 20px;
+		font-family: 'Palatino Linotype', serif;
+		font-size: 2rem;
+		color: #FAFAD2;
+	}
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 10px;
+		justify-content: center; 
+	}
+	.gallery-item img {
+		width: 100%;
+		height: auto;
+		max-width: 300px;
+		border-radius: 8px;
+		transition: transform 0.3s ease;
+	}
+	.gallery-item img:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+	.gallery-item video {
+		width: 100%;
+		max-width: 300px;
+		height: 100%; 
+		object-fit: cover; 
+		border-radius: 8px;
+		transition: transform 0.3s ease;
+	}
+	.gallery-item video:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+	/* Mobile Responsiveness */
+	@media (max-width: 768px) {
+		.gallery-heading {
+			font-size: 1.8rem;
+		}
+		.gallery-grid {
+			grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		}
+	}
+	@media (max-width: 600px) {
+		.gallery-heading {
+			font-size: 1.5rem;
+		}
+		.gallery-grid {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			gap: 15px;  /* Slightly larger gap between items */
+		}
+		.gallery-item img, .gallery-item video {
+			max-width: 100%;  /* Ensure items take full width on small screens */
+		}
+	}
+	</style>
+    <body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                            <li><a href="frihome.html">Friends</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+		<!-- Back button -->
+		<div class="back-btn-container">
+			<a href="javascript:history.back()" class="back-btn">Back</a>
+		</div>
+		<div class="gallery-container">
+			<h1 class="gallery-heading">WELCOME TO MY GALLERY!</h1>
+        
+			<div class="gallery-grid">
+				<div class="gallery-item">
+					<a href="famgal.html">
+						<img src="images/familyimg.jpeg" alt="Image 1">
+					</a>
+				</div>
+				<div class="gallery-item">
+					<a href="frigal.html">
+						<img src="images/friends.png" alt="Image 2">
+					</a>
+				</div>
+				<div class="gallery-item">
+					<a href="myself.html">
+						<img src="images/myselfimg.jpeg" alt="Image 3">
+					</a>
+				</div>
+				<div class="gallery-item">
+					<a href="video.html">
+						<video autoplay muted loop style="width: 100%; height: 100%; border-radius: 8px;">
+							<source src="video/randomvideo.mp4" type="video/mp4"> 
+						</video>
+					</a>
+				</div>
+		    </div>
+		</div>
+		
+		<!--footer-->
+		<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+		
+		<script>
+			$('.icon').click(function(){
+				$('span').toggleClass("cancel");
+			});
+		</script>
+	
+    </body>
+</html>

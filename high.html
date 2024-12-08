@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+	    <title>High School</title>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+	.back-btn-container {
+		text-align: left;
+        margin: 20px 0;
+        padding-left: 20px;
+	}
+	.back-btn {
+		text-decoration: none;
+		color: white;
+		background-color: #6c757d;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+	.back-btn:hover {
+		background-color: #555;
+	}
+	.container {
+		display: flex; 
+		justify-content: space-between; 
+		align-items: center;
+		width: 80%; 
+		margin: 70px auto;
+		gap: 50px; 
+	}
+	.content-box {
+		background-color: rgba(13, 27, 42, 0.7);
+		border-radius: 15px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		padding: 20px;
+		margin: 10px;
+	}
+	.gallery {
+		text-align: center;
+	}
+	.gallery img {
+		width: 100%;
+		max-width: 800px;
+		height: auto;
+		border-radius: 20px;
+	}
+	.biodata {
+		color: #e7e6e1;
+		line-height: 1.8;
+	}
+	.biodata h3 {
+		text-align: center;
+		color: #e7e6e1;
+		}
+	.biodata ul {
+		font-family: 'Times New Roman', serif;
+		list-style-type: square;
+		padding-left: 20px;
+	}
+	/* Adjust box sizes */
+	.gallery-box {
+		flex: 1;
+		max-width: 50%; 
+	}
+	.biodata-box {
+		flex: 2;
+		max-width: 50%;
+	}
+	/* Media Query for Small Screens (Tablets and Mobile Devices) */
+	@media all and (max-width: 768px) {
+		.card-container {
+			justify-content: flex-start;
+			gap: 20px;
+			margin-top: 20px;
+		}
+		.card {
+			width: 250px;
+			margin: 10px;
+		}
+		.card-content h3 {
+			font-size: 1.3em;
+		}
+		.card-content p {
+			font-size: 0.9em;
+		}
+		.btn {
+			font-size: 14px;
+			padding: 8px 16px;
+		}
+	}
+	/* Media Query for Extra Small Screens (Mobile Phones) */
+	@media all and (max-width: 480px) {
+		.card-container {
+			justify-content: center;
+			padding: 0 10px;
+		}
+		.card {
+			width: 100%;
+			margin: 10px 0;
+		}
+		.card-content h3 {
+			font-size: 1.2em;
+		}
+		.card-content p {
+			font-size: 0.85em;
+		}
+		.btn {
+			font-size: 12px;
+			padding: 6px 12px;
+		}
+	}
+	</style>
+    <body>
+	    <div class="wrapper">
+            <nav class="navbar">
+                <img class="logo" src="images/logo.png">
+				<ul>
+				    <li><a href="index.html">HOME</a></li>
+					<li>
+                        <label for="btn-1" class="show">ABOUT ME</label>
+                        <a href="aboutme.html">ABOUT ME</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="bio.html">Biodata</a></li>
+                            <li><a href="famhome.html">Family</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-2" class="show">EDUCATION</label>
+                        <a href="education.html">EDUCATION</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li><a href="primary.html">Primary School</a></li>
+                            <li><a href="high.html">High School</a></li>
+                            <li><a href="dip.html">Diploma</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-3" class="show">EXPERIENCE</label>
+                        <a href="experience.html">EXPERIENCE</a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="work.html">Part-Time Work</a></li>
+                            <li><a href="intern.html">Intern</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <label for="btn-4" class="show">GALLERY</label>
+                        <a href="gallery.html">GALLERY</a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="famgal.html">Family</a></li>
+                            <li><a href="frigal.html">Friends</a></li>
+                            <li><a href="myself.html">Myself</a></li>
+							<li><a href="video.html">Video</a></li>
+                        </ul>
+                    </li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+            </nav>			
+        </div>
+		<body>
+			<!-- Back button -->
+			<div class="back-btn-container">
+				<a href="javascript:history.back()" class="back-btn">Back</a>
+			</div>
+			<div class="container">
+				<!-- Image Box -->
+				<div class="content-box gallery-box">
+					<div class="gallery">
+						<img src="images/5pert.jpeg" alt="me">
+					</div>
+				</div>
+				<!-- Biodata Box -->
+				<div class="content-box biodata-box">
+					<div class="biodata">
+						<h3>High School</h3>
+						<br><hr color="#0d1b2a"><br>
+						<ul>
+							<li><b>School:</b> Sekolah Menengah Telok Panglima Garang</li>
+							<li><b>Nickname:</b> SMK TPG</li>
+							<li><b>Start-End:</b> 2017-2022</li>
+							<li><b>PT3:</b> 1A 4B 2D 1E 1F</li>
+							<li><b>SPM:</b> 2A 5B 1C 1D</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</body>	
+		
+	<!--footer-->
+	<footer>&copy; 2024 Melya LifeStory. All Rights Reserved.</footer>
+	
+	<script>
+        $('.icon').click(function(){
+            $('span').toggleClass("cancel");
+        });
+    </script>
+	
+	</body>
+</html>
